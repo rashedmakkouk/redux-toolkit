@@ -1,0 +1,16 @@
+{
+  "exclude": [
+    "node_modules/**"
+  ],
+  "externalPattern": [],
+  "excludeExternals": false,
+  "hideGenerator": true,
+  "ignoreCompilerErrors": true,
+  "includes": ".",
+  "includeDeclarations": true,
+  "inputFiles": "./src",
+  "mode": "file",
+  "name": "@limo/redux-toolkit",
+  "out": "./docs/types",
+  "readme": "./docs/index.md"
+}
