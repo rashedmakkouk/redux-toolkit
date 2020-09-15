@@ -29,6 +29,7 @@
     "@limo/eslint-config": "file:../../../../../npm/@limo/eslint-config",
     "@limo/utils": "file:../../../../../npm/@limo/utils",
     "@types/node": "^14.10.1",
+    "@types/redux": "^3.6.0",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
     "eslint": "^7.9.0",
