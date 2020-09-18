@@ -14,7 +14,7 @@
     "copy-meta": "cp -r ./{package.json,yarn.lock,README.md,LICENSE} ./dist/",
     "publish-npm": "rm -rf c:/npm/@limo/redux-toolkit/* && cp -r ./dist/* c:/npm/@limo/redux-toolkit/",
     "build": "yarn build-delete && tsc --skipLibCheck && yarn copy-meta && yarn publish-npm",
-    "uP": "yarn upgrade @limo/utils @limo/dev-config --latest",
+    "uP": "yarn upgrade @limo/utils @limo/eslint-config --latest",
     "gen-docs": "yarn typedoc && cp -r ./docs/* c:/Nginx/html/docs/redux-toolkit/"
   },
   "keywords": [
@@ -26,7 +26,7 @@
     "env"
   ],
   "devDependencies": {
-    "@limo/dev-config": "file:../../../../../npm/@limo/dev-config",
+    "@limo/eslint-config": "c:/npm/@limo/eslint-config",
     "@limo/utils": "file:../../../../../npm/@limo/utils",
     "@types/node": "^14.11.1",
     "@types/redux": "^3.6.0",
