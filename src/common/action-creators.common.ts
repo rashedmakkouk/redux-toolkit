@@ -24,6 +24,8 @@ const {
   STORE_RESET,
   UPDATE_PROPS_SUBFOLDER,
   UPDATE_PROPS_FOLDER,
+  UPDATE_BY_ID_SUBFOLDER,
+  UPDATE_BY_ID_FOLDER,
   CONNECT_WEBSOCKET,
   SEND_WEBSOCKET_MESSAGE,
 } = actionTypes;
@@ -115,20 +117,14 @@ export function removeRecordsBy(
   };
 }
 
-export function setProps({
-  folder,
-  payload,
-  subFolder,
-}: {
+export function setProps(args: {
   payload: object;
   folder: string;
   subFolder?: string;
 }): any {
   return {
-    folder,
-    payload,
-    subFolder,
-    type: subFolder ? SET_PROPS_SUBFOLDER : SET_PROPS_FOLDER,
+    ...args,
+    type: !args.subFolder ? SET_PROPS_FOLDER : SET_PROPS_SUBFOLDER,
   };
 }
 
@@ -139,7 +135,18 @@ export function updateProps(args: {
 }): any {
   return {
     ...args,
-    type: args.subFolder ? UPDATE_PROPS_SUBFOLDER : UPDATE_PROPS_FOLDER,
+    type: !args.subFolder ? UPDATE_PROPS_FOLDER : UPDATE_PROPS_SUBFOLDER,
+  };
+}
+
+export function updateById(args: {
+  folder: string;
+  payload: object;
+  subFolder?: string;
+}): any {
+  return {
+    ...args,
+    type: !args.subFolder ? UPDATE_BY_ID_FOLDER : UPDATE_BY_ID_SUBFOLDER,
   };
 }
 
@@ -156,20 +163,14 @@ export function resetProp(
   };
 }
 
-export function removeProps({
-  folder,
-  key,
-  subFolder,
-}: {
+export function removeProps(args: {
   folder: string;
   key: string | string[];
   subFolder?: string;
 }): any {
   return {
-    folder,
-    key,
-    subFolder,
-    type: subFolder ? REMOVE_PROPS_SUBFOLDER : REMOVE_PROPS_FOLDER,
+    ...args,
+    type: !args.subFolder ? REMOVE_PROPS_FOLDER : REMOVE_PROPS_SUBFOLDER,
   };
 }
 
