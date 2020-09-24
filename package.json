@@ -1,13 +1,13 @@
 {
   "name": "@limo/redux-toolkit",
-  "version": "1.04.13",
+  "version": "0.5.0",
   "description": "Universal & useful Redux helper functions.",
-  "author": "Rashed Makkouk",
   "displayName": "@limo/redux-toolkit",
+  "author": "Rashed Makkouk <rashed.makkouk@outlook.com>",
   "license": "UNLICENSED",
   "private": true,
-  "main": "lib/index.js",
-  "types": "types/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "tsc-w": "tsc --watch",
     "build-delete": "rm -rf ./dist/*",
@@ -18,9 +18,11 @@
     "gen-docs": "yarn typedoc && cp -r ./docs/* c:/Nginx/html/docs/redux-toolkit/"
   },
   "keywords": [
-    "redux",
+    "Redux",
     "utils",
-    "@limo"
+    "toolkit",
+    "toolbox",
+    "storage"
   ],
   "presets": [
     "env"
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@limo/eslint-config": "file:../../../../npm/@limo/eslint-config",
     "@limo/utils": "file:../../../../npm/@limo/utils",
+    "@types/lodash": "^4.14.161",
     "@types/node": "^14.11.1",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",

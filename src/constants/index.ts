@@ -1,1 +1,1 @@
-export * from './definitions.constant';
+export * from './definitions';

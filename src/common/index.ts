@@ -1,4 +1,4 @@
-import * as actionCreators from './action-creators.common';
-import * as storeActions from './utils.common';
+import * as actionCreators from './action-creators';
+import * as storeActions from './store-actions';
 
 export { actionCreators, storeActions };
