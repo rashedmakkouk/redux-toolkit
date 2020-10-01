@@ -1,17 +1,14 @@
 {
-  "extends": "./node_modules/@limo/eslint-config/lib/bases/tsconfig.base.json",
+  "extends": "./node_modules/@limo/eslint-config/dist/bases/tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "./",
     "rootDir": "./src",
-    "outDir": "./dist/lib",
-    "declarationDir": "./dist/types",
+    "outDir": "./dist",
     "declaration": true,
     "declarationMap": true,
     "noEmit": false
   },
   "include": [
-    "src/**/*",
-    "index.ts",
-    "index.d.ts"
+    "src/**/*"
   ],
 }

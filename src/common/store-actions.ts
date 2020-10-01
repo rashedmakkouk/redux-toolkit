@@ -1,11 +1,8 @@
 import isArray from 'lodash/isArray';
-
-/* eslint @typescript-eslint/no-explicit-any: 0 */
+import { AnyAction } from 'redux';
 
 export function resetReducerState(initialState: object | Array<any>): object {
-  return !isArray(initialState)
-    ? { ...(initialState as object) }
-    : [...(initialState as Array<any>)];
+  return !isArray(initialState) ? { ...initialState } : [...initialState];
 }
 
 export function resetReducerSubState(
@@ -18,13 +15,13 @@ export function resetReducerSubState(
   };
 }
 
-export function setPropsFolder(state: object, action: any): object {
+export function setPropsFolder(state: object, action: AnyAction): object {
   const { payload } = action;
 
   return { ...payload };
 }
 
-export function setPropsSubFolder(state: object, action: any): object {
+export function setPropsSubFolder(state: object, action: AnyAction): object {
   const { payload, subFolder } = action;
 
   return {
@@ -36,13 +33,13 @@ export function setPropsSubFolder(state: object, action: any): object {
 /**
  * Update object key/value pairs.
  */
-export function updatePropsFolder(state: object, action: any): object {
+export function updatePropsFolder(state: object, action: AnyAction): object {
   const { payload } = action;
 
   return { ...state, ...payload };
 }
 
-export function updatePropsSubFolder(state: object, action: any): object {
+export function updatePropsSubFolder(state: object, action: AnyAction): object {
   const { payload, subFolder } = action;
 
   return {
@@ -68,13 +65,13 @@ function updateByIdState(state: object, payload: object): object {
 /**
  * Update nested objects; useful with normalized payloads.
  */
-export function updateByIdFolder(state: object, action: any): object {
+export function updateByIdFolder(state: object, action: AnyAction): object {
   const { payload } = action;
 
   return updateByIdState(state, payload);
 }
 
-export function updateByIdSubFolder(state: object, action: any): object {
+export function updateByIdSubFolder(state: object, action: AnyAction): object {
   const { payload, subFolder } = action;
 
   return {
@@ -85,7 +82,7 @@ export function updateByIdSubFolder(state: object, action: any): object {
 
 export function resetPropFolder(
   state: object,
-  action: any,
+  action: AnyAction,
   initialState: object
 ): object {
   return {
@@ -96,7 +93,7 @@ export function resetPropFolder(
 
 export function resetPropSubFolder(
   state: object,
-  action: any,
+  action: AnyAction,
   initialState: object
 ): object {
   return {
@@ -111,7 +108,7 @@ export function resetPropSubFolder(
 function removePropsState(state: object, key: string | string[]): object {
   const nextState = { ...state };
 
-  const keys: string[] = (!isArray(key) ? [key] : key) as string[];
+  const keys: string[] = !isArray(key) ? [key] : key;
 
   keys.map((k): void => {
     delete nextState[k];
@@ -120,13 +117,13 @@ function removePropsState(state: object, key: string | string[]): object {
   return nextState;
 }
 
-export function removePropsFolder(state: object, action: any): object {
+export function removePropsFolder(state: object, action: AnyAction): object {
   const { key } = action;
 
   return removePropsState(state, key as string | string[]);
 }
 
-export function removePropsSubFolder(state: object, action: any): object {
+export function removePropsSubFolder(state: object, action: AnyAction): object {
   const { key, subFolder } = action;
 
   return {
@@ -135,33 +132,45 @@ export function removePropsSubFolder(state: object, action: any): object {
   };
 }
 
-export function setRecordsFolder(state: any[], action: any): object {
+export function setRecordsFolder(state: any[], action: AnyAction): object {
   return [...action.payload];
 }
 
-export function setRecordsSubFolder(state: any, action: any): object {
+export function setRecordsSubFolder(state: object, action: AnyAction): object {
   return {
     ...state,
     [action.subFolder]: [...action.payload],
   };
 }
 
-export function appendRecordsFolder(state: object[], action: any): object {
+export function appendRecordsFolder(
+  state: object[],
+  action: AnyAction
+): object {
   return [...state, ...action.payload];
 }
 
-export function appendRecordsSubFolder(state: object, action: any): object {
+export function appendRecordsSubFolder(
+  state: object,
+  action: AnyAction
+): object {
   return {
     ...state,
     [action.subFolder]: [...(state[action.subFolder] || []), ...action.payload],
   };
 }
 
-export function prependRecordsFolder(state: object[], action: any): object {
+export function prependRecordsFolder(
+  state: object[],
+  action: AnyAction
+): object {
   return [...action.payload, ...state];
 }
 
-export function prependRecordsSubFolder(state: object, action: any): object {
+export function prependRecordsSubFolder(
+  state: object,
+  action: AnyAction
+): object {
   return {
     ...state,
     [action.subFolder]: [...action.payload, ...(state[action.subFolder] || [])],
@@ -180,11 +189,17 @@ function removeRecordsByState(
   return state.filter((record: any): boolean => !payload.includes(record[key]));
 }
 
-export function removeRecordsByFolder(state: object[], action: any): object {
+export function removeRecordsByFolder(
+  state: object[],
+  action: AnyAction
+): object {
   return removeRecordsByState(state, action.key, action.payload);
 }
 
-export function removeRecordsBySubFolder(state: object, action: any): object {
+export function removeRecordsBySubFolder(
+  state: object,
+  action: AnyAction
+): object {
   return {
     ...state,
     [action.subFolder]: removeRecordsByState(
