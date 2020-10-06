@@ -6,19 +6,11 @@
   "author": "Rashed Makkouk <rashed.makkouk@outlook.com>",
   "license": "UNLICENSED",
   "private": true,
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "empty-build": "rm -rf c:/npm/@limo/redux-toolkit/*",
-    "build-metadata": "cp -r ./{package.json,yarn.lock,README.md,LICENSE} c:/npm/@limo/redux-toolkit",
-    "build-package": "cp -r ./dist c:/npm/@limo/redux-toolkit",
-    "empty-dist": "rm -rf ./dist/*",
-    "dist-files": "echo dist-files",
-    "compile": "tsc --build",
-    "build": "npm run empty-dist && npm run compile && npm run dist-files && npm run empty-build && npm run build-metadata && npm run build-package",
-    "uP": "yarn upgrade @limo/utils @limo/eslint-config --latest",
-    "gen-docs": "yarn typedoc && cp -r ./docs/* c:/Nginx/html/docs/redux-toolkit/",
-    "tsc": "tsc"
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">= 12.16.1",
+    "yarn": ">=1.4.0"
   },
   "keywords": [
     "Redux",
@@ -27,16 +19,29 @@
     "toolbox",
     "storage"
   ],
-  "presets": [
-    "env"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.1.240:org/redux-toolkit"
+  },
+  "scripts": {
+    "empty-package": "rm -rf c:/npm/@limo/redux-toolkit/*",
+    "copy-package-metadata": "cp -r ./{package.json,yarn.lock,README.md,LICENSE} c:/npm/@limo/redux-toolkit",
+    "publish-local": "yarn copy-package-metadata && mkdir c:\\npm\\@limo\\redux-toolkit\\lib && cp -r ./build/* c:/npm/@limo/redux-toolkit/lib",
+    "empty-build": "rm -rf ./build/*",
+    "copy-build-files": "echo copy-build-files",
+    "compile": "yarn empty-build && tsc --build && yarn copy-build-files",
+    "build": "yarn compile && yarn empty-package && yarn publish-local",
+    "uP": "yarn upgrade @limo/utils @limo/eslint-config --latest",
+    "gen-docs": "yarn typedoc && cp -r ./docs/* c:/Nginx/html/docs/redux-toolkit/",
+    "tsc": "tsc"
+  },
   "devDependencies": {
     "@limo/eslint-config": "file:../../../../npm/@limo/eslint-config",
     "@limo/utils": "file:../../../../npm/@limo/utils",
     "@types/lodash": "^4.14.161",
-    "@types/node": "^14.11.2",
-    "@typescript-eslint/eslint-plugin": "^4.3.0",
-    "@typescript-eslint/parser": "^4.3.0",
+    "@types/node": "^14.11.5",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.22.1",

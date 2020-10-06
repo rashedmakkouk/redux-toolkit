@@ -11,6 +11,6 @@
   "inputFiles": "./src",
   "mode": "file",
   "name": "@limo/redux-toolkit",
-  "out": "./docs/types",
-  "readme": "./docs/index.md"
+  "out": "docs/types",
+  "readme": "README.md"
 }

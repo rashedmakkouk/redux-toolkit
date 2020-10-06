@@ -1,4 +1,4 @@
-node_modules/
-dist/
-*.bak
+node_modules
+build
 yarn-error.log
+*.bak
