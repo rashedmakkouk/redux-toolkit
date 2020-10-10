@@ -28,7 +28,7 @@
     "copy-package-metadata": "cp -r ./{package.json,yarn.lock,README.md,LICENSE} c:/npm/@limo/redux-toolkit",
     "publish-local": "yarn copy-package-metadata && mkdir c:\\npm\\@limo\\redux-toolkit\\lib && cp -r ./build/* c:/npm/@limo/redux-toolkit/lib",
     "empty-build": "rm -rf ./build/*",
-    "copy-build-files": "echo copy-build-files",
+    "copy-build-files": "cp -r ./src/*.d.ts ./build",
     "compile": "yarn empty-build && tsc --build && yarn copy-build-files",
     "build": "yarn compile && yarn empty-package && yarn publish-local",
     "uP": "yarn upgrade @limo/utils @limo/eslint-config --latest",

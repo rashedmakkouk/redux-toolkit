@@ -5,7 +5,10 @@
     "rootDir": "src",
     "outDir": "build",
     "declaration": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "typeRoots": [
+      "src"
+    ]
   },
   "include": [
     "src/**/*"
