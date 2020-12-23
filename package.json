@@ -1,6 +1,6 @@
 {
   "name": "@limo/redux-toolkit",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Opinionated helper functions for consistent Redux experience.",
   "displayName": "@limo/redux-toolkit",
   "author": "Rashed Makkouk <rashed.makkouk@outlook.com>",
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@192.168.1.240:org/redux-toolkit"
+    "url": "git@192.168.1.200:org/redux-toolkit"
   },
   "scripts": {
     "empty-package": "rm -rf c:/npm/@limo/redux-toolkit/*",
@@ -35,9 +35,13 @@
     "gen-docs": "yarn typedoc && cp -r ./docs/* c:/Nginx/html/docs/redux-toolkit/",
     "tsc": "tsc"
   },
+  "dependencies": {
+    "@limo/utils": "c:/npm/@limo/utils",
+    "lodash": "^4.17.20",
+    "redux": "^4.0.5"
+  },
   "devDependencies": {
-    "@limo/eslint-config": "file:../../../../npm/@limo/eslint-config",
-    "@limo/utils": "file:../../../../npm/@limo/utils",
+    "@limo/eslint-config": "c:/npm/@limo/eslint-config",
     "@types/lodash": "^4.14.165",
     "@types/node": "^14.14.7",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
@@ -48,9 +52,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-tsdoc": "^0.2.7",
-    "lodash": "^4.17.20",
     "prettier": "^2.1.2",
-    "redux": "^4.0.5",
     "typedoc": "^0.19.2",
     "typescript": "^4.0.5"
   },
