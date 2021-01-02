@@ -1,4 +1,10 @@
+# Production
+#
 node_modules
 build
-yarn-error.log
+
+# Files
+#
+*.code-workspace
 *.bak
+yarn-error.log
