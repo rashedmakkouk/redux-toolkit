@@ -1,5 +1,8 @@
+/** Utilities */
 import isArray from 'lodash/isArray';
-import { ReducerAction } from '../redux-toolkit';
+
+/** Typings */
+import { ReducerAction } from '../types';
 
 function removePropsState(state: object, key: string | string[]): object {
   const nextState = { ...state };

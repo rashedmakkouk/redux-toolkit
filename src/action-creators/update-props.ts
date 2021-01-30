@@ -1,5 +1,8 @@
-import { ReducerAction, ReducerActionArgs } from '../redux-toolkit';
+/** Utilities */
 import { actionTypes } from '../common';
+
+/** Typings */
+import { ReducerAction, ReducerActionArgs } from '../types';
 
 const { UPDATE_PROPS } = actionTypes;
 

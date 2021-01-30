@@ -1,4 +1,5 @@
-import { ReducerAction } from '../redux-toolkit';
+/** Typings */
+import { ReducerAction } from '../types';
 
 /**
  * Update object key/value pairs.

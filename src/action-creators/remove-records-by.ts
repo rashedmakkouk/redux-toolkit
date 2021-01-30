@@ -1,5 +1,8 @@
-import { RemoveRecordsByAction, RemoveRecordsByArgs } from '../redux-toolkit';
+/** Utilities */
 import { actionTypes } from '../common';
+
+/** Typings */
+import { RemoveRecordsByAction, RemoveRecordsByArgs } from '../types';
 
 const { REMOVE_RECORDS_BY } = actionTypes;
 

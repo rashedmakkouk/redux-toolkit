@@ -1,6 +1,9 @@
+/** Utilities */
 import { Action } from 'redux';
-import { ResetReducerArgs } from '../redux-toolkit';
 import { actionTypes } from '../common';
+
+/** Typings */
+import { ResetReducerArgs } from '../types';
 
 const { RESET_REDUCER } = actionTypes;
 

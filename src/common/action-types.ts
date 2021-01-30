@@ -1,6 +1,7 @@
 /* eslint sort-keys: 0 */
 
-import { ActionTypes } from '../redux-toolkit';
+/** Typings */
+import { ActionTypes } from '../types';
 
 export const actionTypes: { [key in ActionTypes]: string } = {
   /** Reducer */

@@ -1,3 +1,4 @@
+/** Utilities */
 import { Action } from 'redux';
 import { actionTypes } from '../common';
 

@@ -1,4 +1,5 @@
-import { RemoveRecordsByAction } from '../redux-toolkit';
+/** Typings */
+import { RemoveRecordsByAction } from '../types';
 
 function removeRecordsByState(
   state: object[],
