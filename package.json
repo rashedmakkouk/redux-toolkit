@@ -30,12 +30,12 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@limo/utils": "file:/c%3A/npm/@limo/utils#/c%3A/npm/@limo/utils::hash=1759bd&locator=%40limo%2Fredux-toolkit%40workspace%3A.",
+    "@limo/utils": "file:/c%3A/npm/@limo/utils#/c%3A/npm/@limo/utils::hash=9231f2&locator=%40limo%2Fredux-toolkit%40workspace%3A.",
     "lodash": "^4.17.20",
     "redux": "^4.0.5"
   },
   "devDependencies": {
-    "@limo/eslint-config": "file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=8fb4ae&locator=%40limo%2Fredux-toolkit%40workspace%3A.",
+    "@limo/eslint-config": "file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=31701f&locator=%40limo%2Fredux-toolkit%40workspace%3A.",
     "@types/lodash": "^4.14.168",
     "@types/node": "^14.14.22",
     "@types/shelljs": "^0.8.8",

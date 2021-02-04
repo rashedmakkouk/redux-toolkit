@@ -50,9 +50,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@limo/eslint-config@file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=8fb4ae&locator=%40limo%2Fredux-toolkit%40workspace%3A.":
+"@limo/eslint-config@file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=31701f&locator=%40limo%2Fredux-toolkit%40workspace%3A.":
   version: 0.3.0
-  resolution: "@limo/eslint-config@file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=8fb4ae&locator=%40limo%2Fredux-toolkit%40workspace%3A."
+  resolution: "@limo/eslint-config@file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=31701f&locator=%40limo%2Fredux-toolkit%40workspace%3A."
   dependencies:
     "@types/node": ^14.14.22
     "@typescript-eslint/eslint-plugin": ^4.14.1
@@ -77,7 +77,7 @@ __metadata:
     eslint-plugin-tsdoc: ^0.2.11
     prettier: ^2.2.1
     typescript: ^4.1.3
-  checksum: ff9e49530436db7251a7e62ab28ccf302907cb87d8eac42bad8716f8c7a54b4eeb4653a82f2337431058ad3840cf5b5fde2d1b8c5401ad564bb403a6cceb282c
+  checksum: 66a8b454c4b05720f711c3e7390838a890fffd06761197248a0e4e84f67319400305bb1cedbbc772651eb8118e50612a6c580e218acdfb3fa2fddb73f7f878e4
   languageName: node
   linkType: hard
 
@@ -85,8 +85,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@limo/redux-toolkit@workspace:."
   dependencies:
-    "@limo/eslint-config": "file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=8fb4ae&locator=%40limo%2Fredux-toolkit%40workspace%3A."
-    "@limo/utils": "file:/c%3A/npm/@limo/utils#/c%3A/npm/@limo/utils::hash=1759bd&locator=%40limo%2Fredux-toolkit%40workspace%3A."
+    "@limo/eslint-config": "file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=31701f&locator=%40limo%2Fredux-toolkit%40workspace%3A."
+    "@limo/utils": "file:/c%3A/npm/@limo/utils#/c%3A/npm/@limo/utils::hash=9231f2&locator=%40limo%2Fredux-toolkit%40workspace%3A."
     "@types/lodash": ^4.14.168
     "@types/node": ^14.14.22
     "@types/shelljs": ^0.8.8
@@ -112,9 +112,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@limo/utils@file:/c%3A/npm/@limo/utils#/c%3A/npm/@limo/utils::hash=1759bd&locator=%40limo%2Fredux-toolkit%40workspace%3A.":
+"@limo/utils@file:/c%3A/npm/@limo/utils#/c%3A/npm/@limo/utils::hash=9231f2&locator=%40limo%2Fredux-toolkit%40workspace%3A.":
   version: 0.4.0
-  resolution: "@limo/utils@file:/c%3A/npm/@limo/utils#/c%3A/npm/@limo/utils::hash=1759bd&locator=%40limo%2Fredux-toolkit%40workspace%3A."
+  resolution: "@limo/utils@file:/c%3A/npm/@limo/utils#/c%3A/npm/@limo/utils::hash=9231f2&locator=%40limo%2Fredux-toolkit%40workspace%3A."
   dependencies:
     autolinker: ^3.14.2
     color-convert: ^2.0.1
@@ -139,7 +139,7 @@ __metadata:
     url-parse: ^1.4.7
     uuid: ^8.3.2
     validator: ^13.5.2
-  checksum: 273671f327dc7c731d93ffe209b88835533af0b2244422e904e9f82442e16f51795233f09633c1e0682edea4e96c08e27ae97b9c688088093d558e1a334dbf4f
+  checksum: 1b2ffea5eebb28a251b255acff8ca4e42b962dd7c607cc32bc6bc30e06e783d7c9b7b3af18b358e89081a295a91209228ef400a359758557444d19708730d8bd
   languageName: node
   linkType: hard
 
