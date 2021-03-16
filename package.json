@@ -9,7 +9,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "engines": {
-    "node": ">= 14.15.4",
+    "node": ">=14.16.0",
     "yarn": ">=2.4.0"
   },
   "keywords": [
@@ -30,32 +30,37 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "@limo/utils": "file:/c%3A/npm/@limo/utils#/c%3A/npm/@limo/utils::hash=9231f2&locator=%40limo%2Fredux-toolkit%40workspace%3A.",
-    "lodash": "^4.17.20",
+    "@limo/utils": "file:/c%3A/npm/@limo/utils#/c%3A/npm/@limo/utils::hash=a12ebd&locator=%40limo%2Fredux-toolkit%40workspace%3A.",
+    "lodash": "^4.17.21",
     "redux": "^4.0.5"
   },
   "devDependencies": {
-    "@limo/eslint-config": "file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=31701f&locator=%40limo%2Fredux-toolkit%40workspace%3A.",
+    "@commitlint/cli": "^12.1.0",
+    "@commitlint/config-conventional": "^12.1.0",
+    "@limo/eslint-config": "file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=c01c0c&locator=%40limo%2Fredux-toolkit%40workspace%3A.",
     "@types/lodash": "^4.14.168",
-    "@types/node": "^14.14.22",
+    "@types/node": "^14.14.35",
     "@types/shelljs": "^0.8.8",
-    "@typescript-eslint/eslint-plugin": "^4.14.1",
-    "@typescript-eslint/parser": "^4.14.1",
-    "eslint": "^7.18.0",
-    "eslint-config-prettier": "^7.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-tsdoc": "^0.2.11",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "shelljs": "^0.8.4",
+    "standard-version": "^9.1.1",
     "ts-node": "^9.1.1",
-    "typedoc": "^0.20.19",
-    "typescript": "^4.1.3"
+    "typedoc": "^0.20.32",
+    "typescript": "4.2.3"
   },
   "peerDependencies": {
     "@limo/utils": "*",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "redux": "^4.0.5"
   }
 }
