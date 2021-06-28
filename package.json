@@ -1,6 +1,6 @@
 {
   "name": "@limo/redux-toolkit",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Opinionated helper functions for consistent Redux experience.",
   "displayName": "@limo/redux-toolkit",
   "author": "Rashed Makkouk <rashed.makkouk@outlook.com>",

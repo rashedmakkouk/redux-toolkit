@@ -5,9 +5,11 @@
 ### Changes
 
 - chore: Migrate changelog version files to root `CHANGELOG.md`
+    - Remove `docs` directory in favor of `README.md` file
 
 ### Features
 
+- feat: Bump package version from `0.3.0` to `0.4.0`
 - chore: Upgrade package dependencies --latest
     - Upgrade Yarn package manager
 
@@ -34,10 +36,10 @@
 
 ## 0.3.0 (2020-12-20)
 
-### Changes
+### Features
 
-- update: Bump package version to `0.5.1`
-- upgrade: Package dependencies --latest
+- feat: Bump package version to `0.5.1`
+- chore: Upgrade package dependencies --latest
 
 ## 0.2.0 (2020-10-10)
 
@@ -49,7 +51,7 @@
 
 ### Deprecated
 
-- chore: Multiple explicit action creators in favor of universal use
+- chore: Remove multiple explicit action creators in favor of universal helpers
 
 ## 0.2.0 (2020-10-06)
 
@@ -81,14 +83,14 @@
 
 ## 0.1.0 (2020-09-20)
 
+### Bug Fixes
+
+- fix: `setProps` to overwrite data instead of update
+
 ### Changes
 
 - chore: Extend config files from `*.base.*`
 - chore: Update `docs/versions` folder structure
-
-### Bug Fixes
-
-- fix: `setProps` to overwrite data instead of update
 
 ### Features
 
@@ -96,7 +98,7 @@
 
 ## 0.1.0 (2020-09-18)
 
-### Features
+### Changes
 
 - chore: Install `eslint-config` package, update configuration files
 - chore: Package dependencies & references, configuration file, docs
