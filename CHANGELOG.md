@@ -1,6 +1,13 @@
 # Changelog
 
-## 0.6.0 (2021-07-17)
+## 0.4.0 (2021-08-15)
+
+### Features
+
+- feat: Bump package version from `0.4.0` to `0.4.1`
+- chore: Upgrade package dependencies --latest
+
+## 0.4.0 (2021-07-17)
 
 ### Features
 
