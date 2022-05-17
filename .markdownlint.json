@@ -1,3 +1,3 @@
 {
-  "extends": "./node_modules/@limo/eslint-config/lib/bases/.markdownlint.base.json"
+  "extends": "./node_modules/@rashedmakkouk/eslint-config/lib/bases/.markdownlint.base.json"
 }

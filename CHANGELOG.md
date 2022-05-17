@@ -1,13 +1,25 @@
 # Changelog
 
+## 0.4.0 (2022-05-17)
+
+### Features
+
+- feat: Bump package version from `0.4.7` to `0.5.0`
+  - Upgrade package dependencies --latest
+  - Update package `LICENSE` to `MIT`
+  - Update package visibility to `public`
+  - Add GitHub action configuration file
+  - Refactor `build` script
+  - Rename package
+
 ## 0.4.0 (2022-05-08)
 
 ### Features
 
 - feat: Bump package version from `0.4.6` to `0.4.7`
-    - Update package changelog
-    - Upgrade package dependencies --latest
-    - Upgrade Yarn package manager
+  - Update package changelog
+  - Upgrade package dependencies --latest
+  - Upgrade Yarn package manager
 
 ## 0.4.0 (2022-05-07)
 
@@ -20,29 +32,29 @@
 ### Features
 
 - feat: Bump package version from `0.4.5` to `0.4.6`
-    - Upgrade package dependencies --latest
-    - Upgrade Yarn package manager
+  - Upgrade package dependencies --latest
+  - Upgrade Yarn package manager
 
 ## 0.4.0 (2022-01-23)
 
 ### Features
 
 - feat: Bump package version from `0.4.4` to `0.4.5`
-    - Upgrade package dependencies --latest
+  - Upgrade package dependencies --latest
 
 ## 0.4.0 (2021-09-18)
 
 ### Features
 
 - feat: Bump package version from `0.4.3` to `0.4.4`
-    - Upgrade package dependencies --latest
+  - Upgrade package dependencies --latest
 
 ## 0.4.0 (2021-08-30)
 
 ### Features
 
 - feat: Bump package version from `0.4.2` to `0.4.3`
-    - Upgrade package dependencies --latest
+  - Upgrade package dependencies --latest
 
 ## 0.4.0 (2021-08-22)
 
@@ -69,13 +81,13 @@
 ### Changes
 
 - chore: Migrate changelog version files to root `CHANGELOG.md`
-    - Remove `docs` directory in favor of `README.md` file
+  - Remove `docs` directory in favor of `README.md` file
 
 ### Features
 
 - feat: Bump package version from `0.3.0` to `0.4.0`
 - chore: Upgrade package dependencies --latest
-    - Upgrade Yarn package manager
+  - Upgrade Yarn package manager
 
 ## 0.3.0 (2021-04-29)
 

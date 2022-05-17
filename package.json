@@ -1,16 +1,19 @@
 {
-  "name": "@limo/redux-toolkit",
-  "version": "0.4.7",
-  "description": "Opinionated helper functions for consistent Redux experience.",
-  "displayName": "@limo/redux-toolkit",
-  "author": "Rashed Makkouk <rashed.makkouk@outlook.com>",
-  "license": "UNLICENSED",
-  "private": true,
+  "name": "@rashedmakkouk/redux-toolkit",
+  "version": "0.5.0",
+  "description": "Opinionated toolset for consistent Redux experience.",
+  "displayName": "@rashedmakkouk/redux-toolkit",
+  "author": {
+    "name": "Rashed Makkouk",
+    "email": "rashed.makkouk@outlook.com",
+    "url": "https://www.twitter.com/rashedmakkouk"
+  },
+  "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "engines": {
     "node": ">= 16.14.0",
-    "yarn": ">= 3.2.0"
+    "yarn": ">= 1.22.0"
   },
   "keywords": [
     "Redux",
@@ -23,43 +26,57 @@
     "type": "git",
     "url": "https://github.com/rashedmakkouk/redux-toolkit"
   },
+  "bugs": {
+    "url": "https://github.com/rashedmakkouk/redux-toolkit/issues"
+  },
+  "homepage": "https://github.com/rashedmakkouk/redux-toolkit#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "lib/**/*",
+    "**/*.d.ts",
+    "yarn.lock",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
+  ],
   "scripts": {
-    "build": "ts-node ./scripts/build.ts",
+    "build:compile": "tsc --build",
+    "build:prepare": "node ./scripts/build.js",
+    "build": "npm run build:compile && npm run build:prepare",
+    "gen-docs": "yarn typedoc",
     "uP": "yarn upgrade-interactive",
-    "gen-docs": "yarn typedoc && cp -r ./docs/* c:/Nginx/html/docs/redux-toolkit/",
     "tsc": "tsc"
   },
   "dependencies": {
-    "@limo/dev-utils": "file:/c%3A/npm/@limo/dev-utils#/c%3A/npm/@limo/dev-utils::hash=2c6e7c&locator=%40limo%2Fredux-toolkit%40workspace%3A.",
     "lodash": "^4.17.21",
     "redux": "^4.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.4",
-    "@commitlint/config-conventional": "^16.2.4",
-    "@limo/eslint-config": "file:/c%3A/npm/@limo/eslint-config#/c%3A/npm/@limo/eslint-config::hash=e96701&locator=%40limo%2Fredux-toolkit%40workspace%3A.",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@rashedmakkouk/eslint-config": "^0.5.7",
     "@types/lodash": "^4.14.182",
-    "@types/node": "^17.0.31",
+    "@types/node": "^17.0.34",
     "@types/shelljs": "^0.8.11",
-    "@typescript-eslint/eslint-plugin": "^5.22.0",
-    "@typescript-eslint/parser": "^5.22.0",
+    "@typescript-eslint/eslint-plugin": "^5.24.0",
+    "@typescript-eslint/parser": "^5.24.0",
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-tsdoc": "^0.2.16",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
     "shelljs": "^0.8.5",
-    "standard-version": "^9.3.2",
+    "standard-version": "^9.5.0",
     "ts-node": "^10.7.0",
     "typedoc": "^0.22.15",
     "typescript": "4.6.4"
   },
   "peerDependencies": {
-    "@limo/dev-utils": "*",
     "lodash": "^4.17.21",
     "redux": "^4.2.0"
   },

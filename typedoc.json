@@ -10,7 +10,7 @@
   "includeDeclarations": true,
   "inputFiles": "./src",
   "mode": "file",
-  "name": "@limo/redux-toolkit",
+  "name": "@rashedmakkouk/redux-toolkit",
   "out": "docs/types",
   "readme": "README.md"
 }
