@@ -52,5 +52,3 @@ export type ActionTypes =
   | 'NETWORK_OFFLINE'
   | 'CONNECT_WEBSOCKET'
   | 'SEND_WEBSOCKET_MESSAGE';
-
-declare namespace ReduxToolkit {}
