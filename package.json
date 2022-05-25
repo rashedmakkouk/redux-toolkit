@@ -12,8 +12,8 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "engines": {
-    "node": ">= 16.14.0",
-    "yarn": ">= 1.22.0"
+    "node": ">=16.14.0",
+    "yarn": ">=1.22.18"
   },
   "keywords": [
     "Redux",
@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/rashedmakkouk/redux-toolkit#readme",
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "files": [
