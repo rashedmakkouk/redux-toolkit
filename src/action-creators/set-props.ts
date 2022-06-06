@@ -7,7 +7,8 @@ import { ReducerAction, ReducerActionArgs } from '../types';
 const { SET_PROPS } = actionTypes;
 
 /**
- * Sets supplied object properties by resetting initial state.
+ * Resets Store slice to initial state and updates object properties with
+ * supplied key/value pairs payload.
  */
 export function setProps(
   args: ReducerActionArgs<object>

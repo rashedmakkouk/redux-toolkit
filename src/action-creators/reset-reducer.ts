@@ -8,7 +8,7 @@ import { ResetReducerArgs } from '../types';
 const { RESET_REDUCER } = actionTypes;
 
 /**
- * Resets `reducer` to initial state structure.
+ * Resets Store slice to initial state and default values.
  */
 export function resetReducer(
   args: ResetReducerArgs

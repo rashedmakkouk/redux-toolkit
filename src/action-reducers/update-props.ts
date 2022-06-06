@@ -2,7 +2,7 @@
 import { ReducerAction } from '../types';
 
 /**
- * Update object key/value pairs.
+ * Store slice data type: Object.
  */
 function updatePropsFolder(
   state: object,
@@ -10,9 +10,12 @@ function updatePropsFolder(
 ): object {
   const { payload } = action;
 
-  return { ...state, ...payload };
+  return { ...state, ...(payload || {}) };
 }
 
+/**
+ * Store sub slice data type: Object.
+ */
 function updatePropsSubFolder(
   state: object,
   action: ReducerAction<object>
@@ -21,9 +24,9 @@ function updatePropsSubFolder(
 
   return {
     ...state,
-    [subFolder as string]: {
-      ...(state[subFolder as string] || {}),
-      ...payload,
+    [subFolder!]: {
+      ...(state[subFolder!] || {}),
+      ...(payload || {}),
     },
   };
 }

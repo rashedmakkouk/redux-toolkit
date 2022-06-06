@@ -7,7 +7,12 @@ import { ReducerAction, ReducerActionArgs } from '../types';
 const { APPEND_RECORDS } = actionTypes;
 
 /**
- * Adds `array` payload to existing property array value.
+ * Appends Array payload to the end of an existing array.
+ *
+ * Use case:
+ *
+ * - Slice Reducer data type: Array.
+ * - Slice Reducer data type: Object, Sub Slice data type: Array.
  */
 export function appendRecords(
   args: ReducerActionArgs<any[]>

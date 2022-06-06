@@ -1,6 +1,9 @@
 /** Typings */
 import { ReducerAction } from '../types';
 
+/**
+ * Store slice data type: Object.
+ */
 function setPropsFolder(
   state: object,
   action: ReducerAction<object>,
@@ -8,9 +11,12 @@ function setPropsFolder(
 ): object {
   const { payload } = action;
 
-  return { ...initialState, ...payload };
+  return { ...initialState, ...(payload || {}) };
 }
 
+/**
+ * Store sub slice data type: Object.
+ */
 function setPropsSubFolder(
   state: object,
   action: ReducerAction<object>,
@@ -20,7 +26,7 @@ function setPropsSubFolder(
 
   return {
     ...state,
-    [subFolder as string]: { ...initialState, ...payload },
+    [subFolder!]: { ...initialState, ...(payload || {}) },
   };
 }
 

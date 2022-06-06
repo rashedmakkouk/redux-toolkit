@@ -7,7 +7,7 @@ function appendRecordsFolder(
 ): object {
   const { payload } = action;
 
-  return [...state, ...payload];
+  return [...state, ...(payload || [])];
 }
 
 function appendRecordsSubFolder(
@@ -18,7 +18,7 @@ function appendRecordsSubFolder(
 
   return {
     ...state,
-    [subFolder as string]: [...(state[subFolder as string] || []), ...payload],
+    [subFolder!]: [...(state[subFolder!] || []), ...(payload || [])],
   };
 }
 

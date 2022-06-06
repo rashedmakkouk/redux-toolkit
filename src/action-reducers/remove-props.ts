@@ -33,10 +33,7 @@ function removePropsSubFolder(
 
   return {
     ...state,
-    [subFolder as string]: removePropsState(
-      state[subFolder as string],
-      payload
-    ),
+    [subFolder!]: removePropsState(state[subFolder!], payload),
   };
 }
 

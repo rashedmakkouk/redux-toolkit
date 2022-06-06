@@ -7,7 +7,12 @@ import { ReducerAction, ReducerActionArgs } from '../types';
 const { REMOVE_PROPS } = actionTypes;
 
 /**
- * Removes key(s) from object.
+ * Removes object properties by supplied `key(s)` payload.
+ *
+ * Use case:
+ *
+ * - Object properties.
+ * - Normalized Object records.
  */
 export function removeProps(
   args: ReducerActionArgs<string | string[]>

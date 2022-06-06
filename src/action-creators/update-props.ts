@@ -7,7 +7,7 @@ import { ReducerAction, ReducerActionArgs } from '../types';
 const { UPDATE_PROPS } = actionTypes;
 
 /**
- * Overwrites existing object key's values.
+ * Updates object key/value pairs with supplied payload.
  */
 export function updateProps(
   args: ReducerActionArgs<object>

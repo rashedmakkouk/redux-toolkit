@@ -1,9 +1,6 @@
 /** Typings */
 import { ReducerAction } from '../types';
 
-/**
- * @param payload - Object of objects with `id` as key.
- */
 function updatePropsByKeyState(state: object, payload: object): object {
   const nextState = { ...state };
 
@@ -15,9 +12,6 @@ function updatePropsByKeyState(state: object, payload: object): object {
   return nextState;
 }
 
-/**
- * Update nested objects; useful with normalized payloads.
- */
 function updatePropsByKeyFolder(
   state: object,
   action: ReducerAction<object>
@@ -35,10 +29,7 @@ function updatePropsByKeySubFolder(
 
   return {
     ...state,
-    [subFolder as string]: updatePropsByKeyState(
-      state[subFolder as string],
-      payload
-    ),
+    [subFolder!]: updatePropsByKeyState(state[subFolder!], payload),
   };
 }
 
