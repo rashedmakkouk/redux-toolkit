@@ -1,5 +1,46 @@
 # Changelog
 
+## 0.5.0 (2022-06-06)
+
+### Changed
+
+- chore: Update methods usage and code comment
+  - Update `appendRecords`
+  - Update `removeProps`
+  - Update `resetReducer`
+  - Update `setProps`
+  - Update `updatePropsByKey`
+  - Update `updateProps`
+  - Update `appendRecords`
+  - Update `removeProps`
+  - Update `resetReducer`
+- chore: Rename `removeRecordsBy` method to `removeRecordsByKey`
+  - Update Action Creator
+  - Update Action Reducer
+  - Update Action Type
+  - Update usage and code comment
+
+### Documentation
+
+- docs: Update method usage instructions in `README.md`
+
+### Features
+
+- feat: Bump package version from `0.5.0` to `0.6.0`
+- feat: Update package dependencies
+- feat: Add `purge` support to `resetStore` Action Creator
+
+### Fixes
+
+- fix: Update Action Reducers typings
+
+## 0.5.0 (2022-05-25)
+
+### Changes
+
+- chore: Remove package namespace declaration
+- chore: Move publish `access` configuration to `package.json`
+
 ## 0.4.0 (2022-05-17)
 
 ### Features
@@ -155,7 +196,7 @@
 ### Features
 
 - chore: Module files naming convention
-- chore: Pakcage configuration files & external import references
+- chore: Package configuration files & external import references
 
 ## 0.1.0 (2020-09-20)
 
