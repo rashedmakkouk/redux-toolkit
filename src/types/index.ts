@@ -19,7 +19,7 @@ export interface ReducerAction<PayloadT = any>
 export interface ResetReducerArgs extends Pick<ReducerActionArgs, 'folder'> {}
 
 export interface RemoveRecordsByArgs
-  extends ReducerActionArgs<string[]>,
+  extends ReducerActionArgs<string[] | number[]>,
     WithKey {}
 
 export interface RemoveRecordsByAction
@@ -32,11 +32,10 @@ export type ActionTypes =
   | 'SET_PROPS'
   | 'UPDATE_PROPS'
   | 'UPDATE_PROPS_BY_KEY'
-  | 'REMOVE_RECORDS_BY'
+  | 'REMOVE_RECORDS_BY_KEY'
+  | 'PURGE_STORE'
   | 'RESET_REDUCER'
   | 'RESET_STORE'
-  | 'PERSIST_REHYDRATE'
-  | 'PERSIST_PURGE'
   | 'USER_AUTHENTICATED'
   | 'USER_UNAUTHENTICATED'
   | 'SIGN_IN'

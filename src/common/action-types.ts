@@ -10,12 +10,11 @@ export const actionTypes: { [key in ActionTypes]: string } = {
   SET_PROPS: 'reducer/SET_PROPS',
   UPDATE_PROPS: 'reducer/UPDATE_PROPS',
   UPDATE_PROPS_BY_KEY: 'reducer/UPDATE_PROPS_BY_KEY',
-  REMOVE_RECORDS_BY: 'reducer/REMOVE_RECORDS_BY',
+  REMOVE_RECORDS_BY_KEY: 'reducer/REMOVE_RECORDS_BY_KEY',
   /** Store */
+  RESET_STORE: 'store/RESET',
   RESET_REDUCER: 'store/RESET_REDUCER',
-  RESET_STORE: 'store/RESET_STORE',
-  PERSIST_REHYDRATE: 'persist/REHYDRATE',
-  PERSIST_PURGE: 'persist/PURGE',
+  PURGE_STORE: 'persist/PURGE',
   /** User */
   USER_AUTHENTICATED: 'user/AUTHENTICATED',
   USER_UNAUTHENTICATED: 'user/UNAUTHENTICATED',
