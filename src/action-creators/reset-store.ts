@@ -2,13 +2,13 @@
 import { Action } from 'redux';
 import { actionTypes } from '../common';
 
-const { RESET_STORE } = actionTypes;
+const { PURGE_STORE, RESET_STORE } = actionTypes;
 
 /**
- * Returns action of type `RESET_STORE`.
+ * Dispatches action to reset and/or purge Store state.
  */
-export function resetStore(): Action<string> {
+export function resetStore(purge?: boolean): Action<string> {
   return {
-    type: RESET_STORE,
+    type: purge === true ? PURGE_STORE : RESET_STORE,
   };
 }
