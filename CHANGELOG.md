@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.0 (2022-06-06)
+
+### Features
+
+- feat: Bump package version from `0.6.0` to `0.6.1`
+
 ## 0.5.0 (2022-06-06)
 
 ### Changed

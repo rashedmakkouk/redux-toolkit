@@ -1,6 +1,6 @@
 {
   "name": "@rashedmakkouk/redux-toolkit",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Opinionated toolset for consistent Redux development.",
   "displayName": "@rashedmakkouk/redux-toolkit",
   "author": {
