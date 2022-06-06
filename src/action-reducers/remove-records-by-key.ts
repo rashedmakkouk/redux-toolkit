@@ -4,10 +4,10 @@ import { RemoveRecordsByAction } from '../types';
 function removeRecordsByKeyState(
   state: object[],
   key: string,
-  payload: string[] | number[]
+  payload: Array<string | number>
 ): object[] {
   return [state || []].filter((record: object): boolean => {
-    return !(payload || []).includes(record[key]);
+    return !(payload || []).includes(record[key] as string | number);
   });
 }
 
@@ -28,7 +28,11 @@ function removeRecordsByKeySubFolder(
 
   return {
     ...state,
-    [subFolder!]: removeRecordsByKeyState(state[subFolder!], key, payload),
+    [subFolder!]: removeRecordsByKeyState(
+      state[subFolder!] as object[],
+      key,
+      payload
+    ),
   };
 }
 

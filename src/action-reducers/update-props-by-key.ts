@@ -29,7 +29,7 @@ function updatePropsByKeySubFolder(
 
   return {
     ...state,
-    [subFolder!]: updatePropsByKeyState(state[subFolder!], payload),
+    [subFolder!]: updatePropsByKeyState(state[subFolder!] as object, payload),
   };
 }
 
