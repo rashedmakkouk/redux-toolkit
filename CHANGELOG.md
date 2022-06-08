@@ -8,6 +8,7 @@
 
 ### Features
 
+- feat: Bump package version from `0.6.4` to `0.6.5`
 - feat: Bump package version from `0.6.3` to `0.6.4`
 - feat: Bump package version from `0.6.2` to `0.6.3`
 
