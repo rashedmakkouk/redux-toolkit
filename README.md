@@ -364,11 +364,11 @@ export default postsReducer;
 
 ```javascript
 // Redux Store slice data.
-posts: {
-  1: { id: 1 },
-  2: { id: 2 },
-  3: { id: 3 }
-}
+posts: [
+  { id: 1, title: 'Title #1' },
+  { id: 2, title: 'Title #2' },
+  { id: 3, title: 'Title #3' }
+]
 
 // Component.
 dispatch(
@@ -380,9 +380,9 @@ dispatch(
 )
 
 // Result.
-posts: {
-  1: { id: 3 }
-}
+posts: [
+  { id: 3, title: 'Title #3' }
+]
 ```
 
 ### `setProps` *(Object)*
@@ -837,8 +837,8 @@ Store state in local storage.
 
 When using shared [Action Creators](#methods) across multiple reducers, the payload will get
 processed in every reducer that has the action configured. See
-[Restrict processing a dispatched action](#restrict-processing-a-dispatched-action) for required
-configuration.
+[Restrict processing a dispatched action by Slice](#restrict-processing-a-dispatched-action-by-slice)
+for required configuration.
 
 ### Adding custom properties to Action Creators
 
