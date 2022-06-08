@@ -1,6 +1,6 @@
 {
   "name": "@rashedmakkouk/redux-toolkit",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Opinionated toolset for efficient Redux development.",
   "displayName": "@rashedmakkouk/redux-toolkit",
   "author": {
@@ -8,7 +8,7 @@
     "email": "rashed.makkouk@outlook.com",
     "url": "https://www.twitter.com/rashedmakkouk"
   },
-  "license": "BSD 3-Clause License",
+  "license": "BSD 3-Clause",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "engines": {
