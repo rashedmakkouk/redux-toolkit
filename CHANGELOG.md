@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.6.0 (2021-06-08)
+
+### Changed
+
+- chore: Update package license to `BSD 3-Clause License`
+
+### Features
+
+- feat: Bump package version from `0.6.2` to `0.6.3`
+
 ## 0.6.0 (2022-06-08)
 
 ### Features
