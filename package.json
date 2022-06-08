@@ -1,7 +1,7 @@
 {
   "name": "@rashedmakkouk/redux-toolkit",
-  "version": "0.6.1",
-  "description": "Opinionated toolset for consistent Redux development.",
+  "version": "0.6.2",
+  "description": "Opinionated toolset for efficient Redux development.",
   "displayName": "@rashedmakkouk/redux-toolkit",
   "author": {
     "name": "Rashed Makkouk",
@@ -17,7 +17,7 @@
   },
   "keywords": [
     "Redux",
-    "utils",
+    "utilities",
     "toolkit",
     "toolbox",
     "storage"
@@ -36,7 +36,6 @@
   },
   "files": [
     "lib/**/*",
-    "**/*.d.ts",
     "yarn.lock",
     "CHANGELOG.md",
     "CONTRIBUTING.md"

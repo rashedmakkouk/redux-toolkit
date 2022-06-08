@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.6.0 (2022-06-08)
+
+### Features
+
+- feat: Bump package version from `0.6.1` to `0.6.2`
+
+### Fixed
+
+- fix: Update method usage instructions in `README.md`
+  - Fix `removeRecordsByKey` Example
+  - Fix broken links
+
 ## 0.6.0 (2022-06-06)
 
 ### Features
