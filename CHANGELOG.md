@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.6.0 (2022-10-24)
+
+### Changes
+
+- chore: Upgrade package dependencies --latest
+- chore: Upgrade Yarn from `3.2.0` to `3.2.4`
+
+### Features
+
+- feat: Bump package version from `0.6.5` to `0.6.6`
+  - Update package CHANGELOG.md
+
 ## 0.6.0 (2021-06-08)
 
 ### Changed
