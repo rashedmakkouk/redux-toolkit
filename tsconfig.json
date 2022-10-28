@@ -6,6 +6,8 @@
     "rootDir": "src",
     "outDir": "lib",
     "declaration": true,
+    "noEmit": false,
+    "composite": true,
     "allowJs": true,
     "target": "ES2021",
     "lib": [

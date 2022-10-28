@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.6.0 (2022-10-28)
+
+### Bug Fixes
+
+- chore: Fix `ActionCreators` and `ActionReducers` typings
+  - Fix 'resetReducer' ActionCreator Return Type
+  - Rename `RemoveRecordsBy` interface to `RemoveRecordsByKey`
+  - Unify ActionCreators interface and arguments typings
+
+### Features
+
+- feat: Bump package version from `0.6.6` to `0.6.7`
+
 ## 0.6.0 (2022-10-24)
 
 ### Changes
