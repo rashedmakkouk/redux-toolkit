@@ -11,8 +11,8 @@ const { SET_PROPS } = actionTypes;
  * supplied key/value pairs payload.
  */
 export function setProps(
-  args: ReducerActionArgs<object>
-): ReducerAction<object> {
+  args: ReducerActionArgs<Object>
+): ReducerAction<ReducerActionArgs<Object>> {
   return {
     ...args,
     type: SET_PROPS,

@@ -1,5 +1,5 @@
 /** Typings */
-import { ReducerAction } from '../types';
+import { ReducerAction, ReducerActionArgs } from '../types';
 
 function updatePropsByKeyState(state: object, payload: object): object {
   const nextState = { ...state };
@@ -14,7 +14,7 @@ function updatePropsByKeyState(state: object, payload: object): object {
 
 function updatePropsByKeyFolder(
   state: object,
-  action: ReducerAction<object>
+  action: ReducerAction<ReducerActionArgs<Object>>
 ): object {
   const { payload } = action;
 
@@ -23,7 +23,7 @@ function updatePropsByKeyFolder(
 
 function updatePropsByKeySubFolder(
   state: object,
-  action: ReducerAction<object>
+  action: ReducerAction<ReducerActionArgs<Object>>
 ): object {
   const { payload, subFolder } = action;
 
@@ -35,7 +35,7 @@ function updatePropsByKeySubFolder(
 
 export function updatePropsByKey(
   state: object,
-  action: ReducerAction<object>
+  action: ReducerAction<ReducerActionArgs<Object>>
 ): object {
   return !action.subFolder
     ? updatePropsByKeyFolder(state, action)

@@ -2,7 +2,7 @@
 import { actionTypes } from '../common';
 
 /** Typings */
-import { RemoveRecordsByAction, RemoveRecordsByArgs } from '../types';
+import { ReducerAction, RemoveRecordsByKeyArgs } from '../types';
 
 const { REMOVE_RECORDS_BY_KEY } = actionTypes;
 
@@ -13,11 +13,11 @@ const { REMOVE_RECORDS_BY_KEY } = actionTypes;
  * Use case:
  *
  * - Slice Reducer data type: Array.
- * - Slice Reducer data type: Object, Sub Slice data type: Array.
+ * - Sub Slice Reducer data type: Array.
  */
 export function removeRecordsByKey(
-  args: RemoveRecordsByArgs
-): RemoveRecordsByAction {
+  args: RemoveRecordsByKeyArgs
+): ReducerAction<RemoveRecordsByKeyArgs> {
   return {
     ...args,
     type: REMOVE_RECORDS_BY_KEY,

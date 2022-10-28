@@ -1,5 +1,5 @@
 /** Typings */
-import { RemoveRecordsByAction } from '../types';
+import { ReducerAction, RemoveRecordsByKeyArgs } from '../types';
 
 function removeRecordsByKeyState(
   state: object[],
@@ -13,7 +13,7 @@ function removeRecordsByKeyState(
 
 function removeRecordsByKeyFolder(
   state: object[],
-  action: RemoveRecordsByAction
+  action: ReducerAction<RemoveRecordsByKeyArgs>
 ): object {
   const { key, payload } = action;
 
@@ -22,7 +22,7 @@ function removeRecordsByKeyFolder(
 
 function removeRecordsByKeySubFolder(
   state: object,
-  action: RemoveRecordsByAction
+  action: ReducerAction<RemoveRecordsByKeyArgs>
 ): object {
   const { key, payload, subFolder } = action;
 
@@ -38,7 +38,7 @@ function removeRecordsByKeySubFolder(
 
 export function removeRecordsByKey(
   state: object | object[],
-  action: RemoveRecordsByAction
+  action: ReducerAction<RemoveRecordsByKeyArgs>
 ): object {
   return !action.subFolder
     ? removeRecordsByKeyFolder(state as object[], action)

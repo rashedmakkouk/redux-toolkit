@@ -1,9 +1,8 @@
 /** Utilities */
-import { Action } from 'redux';
 import { actionTypes } from '../common';
 
 /** Typings */
-import { ResetReducerArgs } from '../types';
+import { ReducerAction, ResetReducerArgs } from '../types';
 
 const { RESET_REDUCER } = actionTypes;
 
@@ -12,7 +11,7 @@ const { RESET_REDUCER } = actionTypes;
  */
 export function resetReducer(
   args: ResetReducerArgs
-): ResetReducerArgs & Action<string> {
+): ReducerAction<ResetReducerArgs> {
   return {
     ...args,
     type: RESET_REDUCER,

@@ -1,12 +1,12 @@
 /** Typings */
-import { ReducerAction } from '../types';
+import { ReducerAction, ReducerActionArgs } from '../types';
 
 /**
  * Store slice data type: Object.
  */
 function updatePropsFolder(
   state: object,
-  action: ReducerAction<object>
+  action: ReducerAction<ReducerActionArgs<Object>>
 ): object {
   const { payload } = action;
 
@@ -18,7 +18,7 @@ function updatePropsFolder(
  */
 function updatePropsSubFolder(
   state: object,
-  action: ReducerAction<object>
+  action: ReducerAction<ReducerActionArgs<Object>>
 ): object {
   const { payload, subFolder } = action;
 
@@ -33,7 +33,7 @@ function updatePropsSubFolder(
 
 export function updateProps(
   state: object,
-  action: ReducerAction<object>
+  action: ReducerAction<ReducerActionArgs<Object>>
 ): object {
   return !action.subFolder
     ? updatePropsFolder(state, action)

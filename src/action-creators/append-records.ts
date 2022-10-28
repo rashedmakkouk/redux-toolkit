@@ -16,7 +16,7 @@ const { APPEND_RECORDS } = actionTypes;
  */
 export function appendRecords(
   args: ReducerActionArgs<any[]>
-): ReducerAction<any[]> {
+): ReducerAction<ReducerActionArgs<any[]>> {
   return {
     ...args,
     type: APPEND_RECORDS,

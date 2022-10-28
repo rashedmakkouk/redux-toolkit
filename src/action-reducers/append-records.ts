@@ -1,9 +1,9 @@
 /** Typings */
-import { ReducerAction } from '../types';
+import { ReducerAction, ReducerActionArgs } from '../types';
 
 function appendRecordsFolder(
   state: any[],
-  action: ReducerAction<any[]>
+  action: ReducerAction<ReducerActionArgs<any[]>>
 ): object {
   const { payload } = action;
 
@@ -12,7 +12,7 @@ function appendRecordsFolder(
 
 function appendRecordsSubFolder(
   state: object,
-  action: ReducerAction<any[]>
+  action: ReducerAction<ReducerActionArgs<any[]>>
 ): object {
   const { payload, subFolder } = action;
 
@@ -24,7 +24,7 @@ function appendRecordsSubFolder(
 
 export function appendRecords(
   state: object | any[],
-  action: ReducerAction<any[]>
+  action: ReducerAction<ReducerActionArgs<any[]>>
 ): object {
   return !action.subFolder
     ? appendRecordsFolder(state as any[], action)

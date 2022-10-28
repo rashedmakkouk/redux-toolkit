@@ -1,30 +1,20 @@
 import { Action } from 'redux';
 
-export interface WithKey {
-  key: string;
-}
-
 export interface ReducerActionArgs<PayloadT = any> {
   folder: string;
   payload: PayloadT;
   subFolder?: string;
 }
 
-export interface ReducerAction<PayloadT = any>
-  extends ReducerActionArgs<PayloadT>,
-    Action<string> {
-  [extraProp: string]: any;
-}
+export type ReducerAction<ExtraPropsT = { [extraProp: string]: any }> =
+  ExtraPropsT & Action<string>;
 
 export interface ResetReducerArgs extends Pick<ReducerActionArgs, 'folder'> {}
 
-export interface RemoveRecordsByArgs
-  extends ReducerActionArgs<string[] | number[]>,
-    WithKey {}
-
-export interface RemoveRecordsByAction
-  extends RemoveRecordsByArgs,
-    Action<string> {}
+export interface RemoveRecordsByKeyArgs
+  extends ReducerActionArgs<string[] | number[]> {
+  key: string;
+}
 
 export type ActionTypes =
   | 'APPEND_RECORDS'

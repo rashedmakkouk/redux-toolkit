@@ -1,12 +1,12 @@
 /** Typings */
-import { ReducerAction } from '../types';
+import { ReducerAction, ReducerActionArgs } from '../types';
 
 /**
  * Store slice data type: Object.
  */
 function setPropsFolder(
   state: object,
-  action: ReducerAction<object>,
+  action: ReducerAction<ReducerActionArgs<Object>>,
   initialState: object
 ): object {
   const { payload } = action;
@@ -19,7 +19,7 @@ function setPropsFolder(
  */
 function setPropsSubFolder(
   state: object,
-  action: ReducerAction<object>,
+  action: ReducerAction<ReducerActionArgs<Object>>,
   initialState: object
 ): object {
   const { payload, subFolder } = action;
@@ -30,9 +30,14 @@ function setPropsSubFolder(
   };
 }
 
+/**
+ * Usage: In case of updates to the sub slice, the 'state' argument will be
+ * used to populate the root slice data with the recent values, and resets the
+ * sub slice to its original structure before inserting new 'payload'.
+ */
 export function setProps(
   state: object,
-  action: ReducerAction<object>,
+  action: ReducerAction<ReducerActionArgs<Object>>,
   initialState: object
 ): object {
   return !action.subFolder

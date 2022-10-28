@@ -16,7 +16,7 @@ const { REMOVE_PROPS } = actionTypes;
  */
 export function removeProps(
   args: ReducerActionArgs<string | string[]>
-): ReducerAction<string | string[]> {
+): ReducerAction<ReducerActionArgs<string | string[]>> {
   return {
     ...args,
     type: REMOVE_PROPS,

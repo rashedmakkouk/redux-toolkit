@@ -2,9 +2,9 @@
 import isArray from 'lodash/isArray';
 
 /** Typings */
-import { ReducerAction } from '../types';
+import { ReducerAction, ReducerActionArgs } from '../types';
 
-function removePropsState(state: object, key: string | string[]): object {
+function removePropsState(state: any, key: string | string[]): object {
   const nextState = { ...state };
 
   const keys: string[] = !isArray(key) ? [key] : key;
@@ -18,7 +18,7 @@ function removePropsState(state: object, key: string | string[]): object {
 
 function removePropsFolder(
   state: object,
-  action: ReducerAction<string | string[]>
+  action: ReducerAction<ReducerActionArgs<string | string[]>>
 ): object {
   const { payload } = action;
 
@@ -27,7 +27,7 @@ function removePropsFolder(
 
 function removePropsSubFolder(
   state: object,
-  action: ReducerAction<string | string[]>
+  action: ReducerAction<ReducerActionArgs<string | string[]>>
 ): object {
   const { payload, subFolder } = action;
 
@@ -39,7 +39,7 @@ function removePropsSubFolder(
 
 export function removeProps(
   state: object,
-  action: ReducerAction<string | string[]>
+  action: ReducerAction<ReducerActionArgs<string | string[]>>
 ): object {
   return !action.subFolder
     ? removePropsFolder(state, action)

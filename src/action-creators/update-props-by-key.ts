@@ -20,8 +20,8 @@ const { UPDATE_PROPS_BY_KEY } = actionTypes;
  * \}
  */
 export function updatePropsByKey(
-  args: ReducerActionArgs<object>
-): ReducerAction<object> {
+  args: ReducerActionArgs<Object>
+): ReducerAction<ReducerActionArgs<Object>> {
   return {
     ...args,
     type: UPDATE_PROPS_BY_KEY,
