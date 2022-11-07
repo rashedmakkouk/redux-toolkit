@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.14.0 (2022-11-07)
+
+### Features
+
+- feat: Bump package version from `0.6.7` to `0.6.8`
+  - Upgrade package dependencies --latest
+  - Update package CHANGELOG.md
+  - Add `Code Spell Checker` extension configuration
+  - Update links in README.md
+
 ## 0.6.0 (2022-10-28)
 
 ### Bug Fixes

@@ -835,7 +835,7 @@ Store state in local storage.
 
 ### Using shared Action Creators
 
-When using shared [Action Creators](#methods) across multiple reducers, the payload will get
+When using shared [Action Creators](#action-creators) across multiple reducers, the payload will get
 processed in every reducer that has the action configured. See
 [Restrict processing a dispatched action by Slice](#restrict-processing-a-dispatched-action-by-slice)
 for required configuration.
@@ -868,7 +868,6 @@ the full license text.
 [discussions]: https://github.com/rashedmakkouk/redux-toolkit/discussions
 [discussions-ideas]: https://github.com/rashedmakkouk/redux-toolkit/discussions/categories/ideas
 [discussions-q-a]: https://github.com/rashedmakkouk/redux-toolkit/discussions/categories/q-a
-[issues]: https://github.com/rashedmakkouk/redux-toolkit/issues
 [bsd-3-clause-license]: https://opensource.org/licenses/BSD-3-Clause
 [license-file]: https://github.com/rashedmakkouk/redux-toolkit/blob/main/LICENSE
 [changelog]: https://github.com/rashedmakkouk/redux-toolkit/blob/main/CHANGELOG.md
