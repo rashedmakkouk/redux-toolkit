@@ -42,8 +42,8 @@
   ],
   "scripts": {
     "build:compile": "tsc --build",
-    "build:prepare": "node ./scripts/build.js",
-    "build": "npm run build:prepare && npm run build:compile",
+    "build:clean": "node ./scripts/clean-build.js",
+    "build": "npm run build:clean && npm run build:compile",
     "gen-docs": "yarn typedoc",
     "uP": "yarn upgrade-interactive",
     "tsc": "tsc"

@@ -1,6 +1,6 @@
 {
-  "extends": "./node_modules/@rashedmakkouk/eslint-config/lib/bases/tsconfig.base.json",
-  "display": "Node Package",
+  "extends": "@rashedmakkouk/eslint-config/lib/bases/tsconfig.base.json",
+  "display": "@rashedmakkouk/redux-toolkit",
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": "src",
@@ -9,16 +9,15 @@
     "noEmit": false,
     "composite": true,
     "allowJs": true,
-    "target": "ES2021",
+    "target": "ES2022",
     "lib": [
-      "ES2021"
+      "ES2022"
     ],
     "noEmitOnError": true
   },
   "exclude": [
     "node_modules",
-    "lib",
-    "scripts"
+    "lib"
   ],
   "include": [
     "src/**/*"
