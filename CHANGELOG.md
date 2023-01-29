@@ -1,6 +1,45 @@
 # Changelog
 
-## 0.14.0 (2022-11-07)
+## 0.6.0 (2023-01-29)
+
+### Changes
+
+- chore: Code updates and enhancements
+  - Refactor to follow newly applied linting rules
+  - Use `unknown` instead of explicit `any`
+  - Refactor `removeRecordsByKeyState` method in `removeRecordsByKey` Action Creator
+  - Sort `imports` and `exports`
+- chore: Update package configuration files
+  - Update compiler target to ECMAScript version `2022`
+  - Add `typescript.eslint.json` configuration file
+  - Update `extends` path in `tsconfig.json` configuration file
+  - Update `extends` path in `.markdownlint.json` configuration file
+  - Add `clean.js` script file and update `build` script command
+  - Remove `build.js` script file and `build:prepare` script command
+  - Update `cspell.json` file
+  - Update `Year` and contact handle in `LICENSE`
+
+### Documentation
+
+- docs: Update package `README.md`
+  - Add `Action Creators` validations notice
+  - Add link to `Issues` website
+  - Minor literature and text styling enhancements
+
+### Features
+
+- feat: Bump package version from `0.6.8` to `0.7.0`
+  - Update release `CHANGELOG.md`
+
+## 0.6.0 (2023-01-28)
+
+### Features
+
+- feat: Upgrade package dependencies --latest
+  - Remove peer dependencies installed as part of `@rashedmakkouk/eslint-config`
+  - Upgrade Yarn version from `3.2.4` to `3.3.1`
+
+## 0.6.0 (2022-11-07)
 
 ### Features
 
@@ -15,7 +54,7 @@
 ### Bug Fixes
 
 - chore: Fix `ActionCreators` and `ActionReducers` typings
-  - Fix 'resetReducer' ActionCreator Return Type
+  - Fix `resetReducer` ActionCreator Return Type
   - Rename `RemoveRecordsBy` interface to `RemoveRecordsByKey`
   - Unify ActionCreators interface and arguments typings
 
