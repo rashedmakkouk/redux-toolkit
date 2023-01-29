@@ -1,6 +1,5 @@
 /** Utilities */
 import { actionTypes } from '../common';
-
 /** Typings */
 import { ReducerAction, ReducerActionArgs } from '../types';
 
@@ -15,8 +14,8 @@ const { APPEND_RECORDS } = actionTypes;
  * - Slice Reducer data type: Object, Sub Slice data type: Array.
  */
 export function appendRecords(
-  args: ReducerActionArgs<any[]>
-): ReducerAction<ReducerActionArgs<any[]>> {
+  args: ReducerActionArgs<unknown[]>
+): ReducerAction<ReducerActionArgs<unknown[]>> {
   return {
     ...args,
     type: APPEND_RECORDS,

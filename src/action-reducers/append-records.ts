@@ -2,8 +2,8 @@
 import { ReducerAction, ReducerActionArgs } from '../types';
 
 function appendRecordsFolder(
-  state: any[],
-  action: ReducerAction<ReducerActionArgs<any[]>>
+  state: unknown[],
+  action: ReducerAction<ReducerActionArgs<unknown[]>>
 ): object {
   const { payload } = action;
 
@@ -12,21 +12,26 @@ function appendRecordsFolder(
 
 function appendRecordsSubFolder(
   state: object,
-  action: ReducerAction<ReducerActionArgs<any[]>>
+  action: ReducerAction<ReducerActionArgs<unknown[]>>
 ): object {
   const { payload, subFolder } = action;
 
   return {
     ...state,
-    [subFolder!]: [...(state[subFolder!] || []), ...(payload || [])],
+    /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */
+    [subFolder!]: [
+      /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */
+      ...((state[subFolder!] || []) as unknown[]),
+      ...(payload || []),
+    ],
   };
 }
 
 export function appendRecords(
-  state: object | any[],
-  action: ReducerAction<ReducerActionArgs<any[]>>
+  state: object | unknown[],
+  action: ReducerAction<ReducerActionArgs<unknown[]>>
 ): object {
   return !action.subFolder
-    ? appendRecordsFolder(state as any[], action)
+    ? appendRecordsFolder(state as unknown[], action)
     : appendRecordsSubFolder(state, action);
 }

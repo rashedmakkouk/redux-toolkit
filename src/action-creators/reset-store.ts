@@ -1,5 +1,6 @@
 /** Utilities */
 import { Action } from 'redux';
+
 import { actionTypes } from '../common';
 
 const { PURGE_STORE, RESET_STORE } = actionTypes;

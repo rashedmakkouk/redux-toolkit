@@ -1,14 +1,13 @@
 /** Utilities */
 import { actionTypes } from '../common';
-
 /** Typings */
 import { ReducerAction, ReducerActionArgs } from '../types';
 
 const { UPDATE_PROPS_BY_KEY } = actionTypes;
 
 /**
- * Iterates over normalized data structures by `key`, updates object properties
- * if exists, else adds a new record.
+ * Iterates over normalized data structures by Object keys, updates child
+ * objects properties if exist, else adds a new record.
  *
  * Example:
  *
@@ -20,8 +19,8 @@ const { UPDATE_PROPS_BY_KEY } = actionTypes;
  * \}
  */
 export function updatePropsByKey(
-  args: ReducerActionArgs<Object>
-): ReducerAction<ReducerActionArgs<Object>> {
+  args: ReducerActionArgs<object>
+): ReducerAction<ReducerActionArgs<object>> {
   return {
     ...args,
     type: UPDATE_PROPS_BY_KEY,

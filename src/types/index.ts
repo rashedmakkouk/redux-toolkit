@@ -1,13 +1,12 @@
 import { Action } from 'redux';
 
-export interface ReducerActionArgs<PayloadT = any> {
+export interface ReducerActionArgs<PayloadT = unknown> {
   folder: string;
   payload: PayloadT;
   subFolder?: string;
 }
 
-export type ReducerAction<ExtraPropsT = { [extraProp: string]: any }> =
-  ExtraPropsT & Action<string>;
+export type ReducerAction<ExtraPropsT = object> = Action<string> & ExtraPropsT;
 
 export interface ResetReducerArgs extends Pick<ReducerActionArgs, 'folder'> {}
 

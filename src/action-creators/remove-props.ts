@@ -1,13 +1,12 @@
 /** Utilities */
 import { actionTypes } from '../common';
-
 /** Typings */
 import { ReducerAction, ReducerActionArgs } from '../types';
 
 const { REMOVE_PROPS } = actionTypes;
 
 /**
- * Removes object properties by supplied `key(s)` payload.
+ * Removes object properties by supplied `key`(s) payload.
  *
  * Use case:
  *

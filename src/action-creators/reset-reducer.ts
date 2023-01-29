@@ -1,6 +1,5 @@
 /** Utilities */
 import { actionTypes } from '../common';
-
 /** Typings */
 import { ReducerAction, ResetReducerArgs } from '../types';
 

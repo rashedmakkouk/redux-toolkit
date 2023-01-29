@@ -1,4 +1,4 @@
-/* eslint sort-keys: 0 */
+/* eslint sort-keys: off */
 
 /** Typings */
 import { ActionTypes } from '../types';

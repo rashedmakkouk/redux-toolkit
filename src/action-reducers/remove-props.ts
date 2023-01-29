@@ -4,7 +4,7 @@ import isArray from 'lodash/isArray';
 /** Typings */
 import { ReducerAction, ReducerActionArgs } from '../types';
 
-function removePropsState(state: any, key: string | string[]): object {
+function removePropsState(state: object, key: string | string[]): object {
   const nextState = { ...state };
 
   const keys: string[] = !isArray(key) ? [key] : key;
@@ -33,7 +33,8 @@ function removePropsSubFolder(
 
   return {
     ...state,
-    [subFolder!]: removePropsState(state[subFolder!], payload),
+    /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */
+    [subFolder!]: removePropsState(state[subFolder!] as object, payload),
   };
 }
 

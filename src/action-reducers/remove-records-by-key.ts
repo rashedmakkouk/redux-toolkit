@@ -6,8 +6,14 @@ function removeRecordsByKeyState(
   key: string,
   payload: Array<string | number>
 ): object[] {
-  return [state || []].filter((record: object): boolean => {
-    return !(payload || []).includes(record[key] as string | number);
+  if (!state?.length) {
+    return [];
+  } else if (!payload?.length) {
+    return state;
+  }
+
+  return state.filter((record: object): boolean => {
+    return !payload.includes(record[key] as string | number);
   });
 }
 
@@ -28,7 +34,9 @@ function removeRecordsByKeySubFolder(
 
   return {
     ...state,
+    /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */
     [subFolder!]: removeRecordsByKeyState(
+      /* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */
       state[subFolder!] as object[],
       key,
       payload
@@ -42,5 +50,5 @@ export function removeRecordsByKey(
 ): object {
   return !action.subFolder
     ? removeRecordsByKeyFolder(state as object[], action)
-    : removeRecordsByKeySubFolder(state, action);
+    : removeRecordsByKeySubFolder(state as object, action);
 }
