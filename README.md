@@ -6,7 +6,7 @@ Opinionated toolset for efficient Redux development.
 
 Install package in your project.
 
-```shell
+```bash
 # NPM
 npm install @rashedmakkouk/redux-toolkit
 
@@ -229,6 +229,9 @@ dispatch(
 
 Commonly used Redux Store actions for processing payloads.
 
+**IMPORTANT**: No data types validations are made to any of the action types, arguments or payload.
+Make sure your data is correct and consistent to avoid thrown exceptions or unexpected outcome.
+
 ### `appendRecords` *(Array)*
 
 Appends Array payload to the end of an existing array.
@@ -387,8 +390,8 @@ posts: [
 
 ### `setProps` *(Object)*
 
-Resets Store slice to initial state and updates object properties with supplied key/value pairs
-payload.
+Resets Store slice Object to initial state and updates object properties with supplied key/value
+pairs `payload`.
 
 #### Parameters
 
@@ -467,7 +470,7 @@ network: {
 
 ### `updateProps` *(Object)*
 
-Updates object key/value pairs with supplied payload.
+Updates object key/value pairs with supplied `payload`.
 
 #### Parameters
 
@@ -553,7 +556,7 @@ config: {
 
 ### `removeProps` *(Object)*
 
-Removes object properties by supplied `key(s)` payload.
+Removes object properties by supplied `key`(s) payload.
 
 Use case:
 
@@ -628,8 +631,8 @@ temp: {
 
 ### `updatePropsByKey` *(Object)*
 
-Iterates over normalized data structures by `key`, updates object properties if
-exists, else adds a new record.
+Iterates over normalized data structures by Object keys, updates child objects properties if
+exist, else adds a new record.
 
 #### Parameters
 
@@ -859,12 +862,15 @@ your ideas and suggestions.
 - [`Ideas`][discussions-ideas]
 - [`Q&A`][discussions-q-a]
 
+Head over to [Issues][issues] to report discovered bugs or code enhancement suggestions.
+
 ## License
 
 This package is available under the [BSD 3-Clause license][bsd-3-clause-license]. It also includes
 external libraries that are available under a variety of licenses. See [LICENSE][license-file] for
 the full license text.
 
+[issues]: https://github.com/rashedmakkouk/redux-toolkit/issues
 [discussions]: https://github.com/rashedmakkouk/redux-toolkit/discussions
 [discussions-ideas]: https://github.com/rashedmakkouk/redux-toolkit/discussions/categories/ideas
 [discussions-q-a]: https://github.com/rashedmakkouk/redux-toolkit/discussions/categories/q-a
